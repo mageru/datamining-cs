@@ -7,3 +7,6 @@ C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProj
 C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.csproj.GenerateResource.Cache
 C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.exe
 C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.pdb
+C:\Users\Justin\Documents\Visual Studio 2012\Projects\DataminingProject\DataminingProject\bin\Debug\DataminingProject.exe.config
+C:\Users\Justin\Documents\Visual Studio 2012\Projects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.exe
+C:\Users\Justin\Documents\Visual Studio 2012\Projects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.pdb
