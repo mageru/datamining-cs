@@ -1,0 +1,9 @@
+C:\VSStudioProjects\DataminingProject\DataminingProject\bin\Debug\DataminingProject.exe.config
+C:\VSStudioProjects\DataminingProject\DataminingProject\bin\Debug\DataminingProject.exe
+C:\VSStudioProjects\DataminingProject\DataminingProject\bin\Debug\DataminingProject.pdb
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.csprojResolveAssemblyReference.cache
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.Form1.resources
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.Properties.Resources.resources
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.csproj.GenerateResource.Cache
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.exe
+C:\VSStudioProjects\DataminingProject\DataminingProject\obj\Debug\DataminingProject.pdb
