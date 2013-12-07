@@ -52,6 +52,7 @@
     <Compile Include="Algorithms\AprioriAlgorithm\AprioriItemsetComparer.cs" />
     <Compile Include="Algorithms\AprioriAlgorithm\ListStringKeyComparer.cs" />
     <Compile Include="Algorithms\baseAlgorithm.cs" />
+    <Compile Include="Algorithms\CLUSTERPlusAlgorithm\CLOSETPlusAlgo.cs" />
     <Compile Include="Algorithms\ECLATAlgorithm\CharmHashTable.cs" />
     <Compile Include="Algorithms\ECLATAlgorithm\ECLAT.cs" />
     <Compile Include="Algorithms\ECLATAlgorithm\ItemSet.cs" />

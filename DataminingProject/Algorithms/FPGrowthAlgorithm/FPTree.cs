@@ -9,7 +9,7 @@ namespace DataminingProject.Algorithms
     public class FPTree
     {
         public List<string> headerList = null;
-        public SortedDictionary<string, int> headerTable = new SortedDictionary<string,int>();
+        public List<KeyValuePair<string, int>> sortedHeaderTable = null;
         public Dictionary<string, FPNode> mapItemNodes = new Dictionary<string, FPNode>();
 
         public bool hasMoreThanOnePath = false;
@@ -124,7 +124,13 @@ namespace DataminingProject.Algorithms
         {
             headerList = mapItemNodes.Keys.ToList();
             headerList.Sort(new FPStringComparer(dictionarySupport));
+
+            sortedHeaderTable = dictionarySupport.ToList();
+            sortedHeaderTable.Sort(new FPParamSupportComparer(sortedHeaderTable));
+            sortedHeaderTable.ForEach(item => Console.WriteLine(item.Key.ToString() + " ----> " + item.Value.ToString()));
         }
+
+
     }
     
 }

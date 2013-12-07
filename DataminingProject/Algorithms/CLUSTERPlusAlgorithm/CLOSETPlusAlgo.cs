@@ -58,6 +58,7 @@ namespace DataminingProject.Algorithms
                             }
                             transaction.Sort(new FPStringComparer(mapSupport));
                             globaltree.addTransaction(transaction);
+
                         }
                     }
                 }
