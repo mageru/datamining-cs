@@ -9,10 +9,10 @@ namespace DataminingProject.Algorithms
     public class FPTree
     {
         public List<string> headerList = null;
+        public SortedDictionary<string, int> headerTable = new SortedDictionary<string,int>();
         public Dictionary<string, FPNode> mapItemNodes = new Dictionary<string, FPNode>();
 
         public bool hasMoreThanOnePath = false;
-
         public FPNode root = new FPNode();
 
         public FPTree()
@@ -33,17 +33,13 @@ namespace DataminingProject.Algorithms
                     FPNode newNode = new FPNode();
                     newNode.itemID = item;
                     newNode.parent = currentNode;
-
                     currentNode.children.Add(newNode);
 
                     if (!hasMoreThanOnePath && currentNode.children.Count > 1)
                     {
                         hasMoreThanOnePath = true;
                     }
-
-                    currentNode = newNode;
-
-                    
+                    currentNode = newNode;                    
 
                     if (!mapItemNodes.ContainsKey(item))
                     {
@@ -52,7 +48,6 @@ namespace DataminingProject.Algorithms
                     else
                     {
                         FPNode header = mapItemNodes[item];
-
                         while (header.nodeLink != null)
                         {
                             header = header.nodeLink;
@@ -71,7 +66,6 @@ namespace DataminingProject.Algorithms
         public void addPrefixPath(List<FPNode> prefixPath, Dictionary<string, int> mapSupportBeta, int relativeMinSupport)
         {
             int pathCount = prefixPath.ElementAt(0).counter;
-
             FPNode currentNode = root;
 
             for (int i = prefixPath.Count - 1; i >= 1; i--)
@@ -84,24 +78,20 @@ namespace DataminingProject.Algorithms
                 }
 
                 FPNode child = currentNode.getChildWithID(pathItem.itemID);
-
                 if (child == null)
                 {
                     FPNode newNode = new FPNode();
-
                     newNode.itemID = pathItem.itemID;
                     newNode.parent = currentNode;
                     newNode.counter = pathCount;
 
                     currentNode.children.Add(newNode);
-
                     if (!hasMoreThanOnePath && currentNode.children.Count > 1)
                     {
                         hasMoreThanOnePath = true;
                     }
 
                     currentNode = newNode;
-
                     FPNode header = null;
 
                     if (mapItemNodes.ContainsKey(pathItem.itemID))
@@ -119,7 +109,6 @@ namespace DataminingProject.Algorithms
                         {
                             header = header.nodeLink;
                         }
-
                         header.nodeLink = newNode;
                     }
                 }
@@ -128,15 +117,12 @@ namespace DataminingProject.Algorithms
                     child.counter += pathCount;
                     currentNode = child;
                 }
-
             }
-
         }
 
         public void createHeaderList(Dictionary<string, int> dictionarySupport)
         {
             headerList = mapItemNodes.Keys.ToList();
-
             headerList.Sort(new FPStringComparer(dictionarySupport));
         }
     }
